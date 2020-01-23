@@ -6,7 +6,7 @@ defmodule ExAws.MediaLive.MixProject do
   def project do
     [
       app: :ex_aws_medialive,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.9",
       description: "ExAws.MediaLive service package",
       source_url: @repo_url,

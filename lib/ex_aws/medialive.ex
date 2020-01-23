@@ -1,4 +1,6 @@
 defmodule ExAws.MediaLive do
+  alias ExAws.MediaLive.Utils
+
   # Input Security Groups
 
   def list_input_security_groups(params \\ []) do
@@ -86,7 +88,7 @@ defmodule ExAws.MediaLive do
   end
 
   defp normalize_params(params) do
-    ExAws.Utils.camelize_keys(params)
+    Utils.camelize_keys(params)
   end
 
   defp normalize_data("" = data), do: data
@@ -95,6 +97,6 @@ defmodule ExAws.MediaLive do
   defp normalize_data(data) do
     data
     |> Enum.into(%{})
-    |> ExAws.Utils.camelize_keys()
+    |> Utils.camelize_keys()
   end
 end
